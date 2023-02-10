@@ -1,0 +1,45 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "title": "REST API Service",
+        "version": "1.0.0",
+        "description": "REST service offering several useful enpoints\n\nReferences:\n- [Swagger Editor](https://editor-next.swagger.io/)\n- [Swagger 3.0 Specifications](https://swagger.io/specification/v3/)",
+        "contact": {
+            "name": "Jesus",
+            "email": "email@domain.com"
+        }
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3000"
+        }
+    ],
+    "tags": [
+        {
+            "name": "Network",
+            "description": "Network Related Routes"
+        }
+    ],
+    "paths": {
+        "/ip": {
+            "get": {
+                "tags": [
+                    "Network"
+                ],
+                "summary": "Get the IP address of node server host",
+                "description": "Returns the IP address of the machine hosting the node server",
+                "responses": {
+                    "200": {
+                        "description": "IP was fetched successfully",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {}
+    }
+}
